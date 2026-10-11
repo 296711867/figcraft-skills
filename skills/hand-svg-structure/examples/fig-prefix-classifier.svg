@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1402" height="783" viewBox="0 0 1402 783">
+  <!-- Streaming ECG prefix classifier + stopping controller.
+       Replication of reference.png (same coordinate system, geometry/colors probed
+       from the reference bitmap), with one deliberate deviation: the Dilated
+       residual TCN box is widened (536-889 vs reference 560-875) so the
+       "each block: ..." caption is not crowded. -->
+  <style>
+    text { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+    .mi  { font-family: 'Times New Roman', Times, serif; font-style: italic; }
+    .tsec { font-size: 17px; font-weight: bold; }
+    .ttl  { font-size: 15px; font-weight: bold; }
+    .bod  { font-size: 14px; }
+    .inn  { font-size: 13.5px; }
+    .wtx  { font-size: 14.5px; }
+  </style>
+  <defs>
+    <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="12.5" markerHeight="10.5" refX="11" refY="5.25" orient="auto">
+      <path d="M0,0 L11.5,5.25 L0,10.5 z" fill="#3d3d3d"/>
+    </marker>
+    <marker id="ahb" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M0,0 L11,6 L0,12 z" fill="#2566B1"/>
+    </marker>
+  </defs>
+
+  <rect width="1402" height="783" fill="#ffffff"/>
+  <g fill="#2D2D2D">
+
+  <!-- ================= group A : prefix classifier ================= -->
+  <rect x="17.5" y="23.5" width="1361" height="334" rx="10" fill="none" stroke="#9CB8DA" stroke-width="2.2" stroke-dasharray="8 5"/>
+  <text x="45" y="50" text-anchor="middle" class="tsec" fill="#1B60AD">A</text>
+  <text x="66" y="50" class="tsec" fill="#1B60AD">Prefix classifier (TCN-GRU, 346 k parameters) — re-run on the whole prefix every time it grows</text>
+
+  <!-- ECG prefix node -->
+  <rect x="63" y="80.5" width="205" height="243" rx="7" fill="#F2F2F2" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="165.5" y="105" text-anchor="middle" class="ttl">ECG prefix <tspan class="mi">X</tspan><tspan class="mi" dy="3.5" font-size="10.5">1:w</tspan></text>
+  <text x="165.5" y="140" text-anchor="middle" class="bod">lead II, 100 Hz</text>
+  <text x="165.5" y="159.5" text-anchor="middle" class="bod"><tspan class="mi">w</tspan> = 1 … 10 s since onset</text>
+  <text x="165.5" y="179" text-anchor="middle" class="bod">z-scored, left-padded</text>
+  <text x="165.5" y="198" text-anchor="middle" class="bod">to 1,000 samples</text>
+  <rect x="78" y="247" width="35" height="58" rx="2" fill="#ffffff" stroke="#c2c2c2" stroke-width="1.3"/>
+  <text x="95.5" y="280.5" text-anchor="middle" font-size="12.5" fill="#8f8f8f">pad</text>
+  <polyline fill="none" stroke="#2b2b2b" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" points="114,269 117,279 120,279 123,278.5 126,277.5 129,276.5 132,281 135,280.5 138,279.5 141,278.5 144,278 147,277 150,277 153,276 156,278 159,272 162,279.5 165,279 168,278 171,277 174,276.5 177,281 180,280 183,279 186,278.5 189,278 192,277 195,277 198,276.5 201,278 204,272.5 207,279.5 210,279 213,278 216,277 219,278 222,281 225,280 228,279 231,275.5 234,263.5 237,286 240,286.5 243,284 246,282.5 249,276"/>
+
+  <!-- Multi-scale conv -->
+  <rect x="306" y="84" width="202" height="239" rx="7" fill="#E4EEF8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="407" y="106" text-anchor="middle" class="ttl">Multi-scale conv</text>
+  <rect x="322" y="152" width="49" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <rect x="381" y="152" width="49" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <rect x="440" y="152" width="49" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <text x="346.5" y="178" text-anchor="middle" class="inn">k = 5</text>
+  <text x="346.5" y="200" text-anchor="middle" class="inn">32 ch</text>
+  <text x="405.5" y="178" text-anchor="middle" class="inn">k = 9</text>
+  <text x="405.5" y="200" text-anchor="middle" class="inn">32 ch</text>
+  <text x="464.5" y="178" text-anchor="middle" class="inn">k = 15</text>
+  <text x="464.5" y="200" text-anchor="middle" class="inn">32 ch</text>
+  <text x="407" y="282" text-anchor="middle" class="bod">concat → BN → ReLU</text>
+  <text x="407" y="301" text-anchor="middle" class="bod">96 × 1,000</text>
+
+  <!-- Dilated residual TCN (widened vs reference: caption breathing room) -->
+  <rect x="536" y="84" width="353" height="239" rx="7" fill="#E4EEF8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="712.5" y="106" text-anchor="middle" class="ttl">Dilated residual TCN</text>
+  <rect x="569.5" y="152" width="55" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <rect x="644.5" y="152" width="55" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <rect x="719.5" y="152" width="55" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <rect x="794.5" y="152" width="55" height="65" rx="7" fill="#ffffff" stroke="#5c5c5c" stroke-width="1.4"/>
+  <text x="597" y="189" text-anchor="middle" class="inn">d = 1</text>
+  <text x="672" y="189" text-anchor="middle" class="inn">d = 2</text>
+  <text x="747" y="189" text-anchor="middle" class="inn">d = 4</text>
+  <text x="822" y="189" text-anchor="middle" class="inn">d = 8</text>
+  <g stroke="#3d3d3d" stroke-width="1.5">
+    <line x1="626.5" y1="184.5" x2="642.5" y2="184.5" marker-end="url(#ah)"/>
+    <line x1="701.5" y1="184.5" x2="717.5" y2="184.5" marker-end="url(#ah)"/>
+    <line x1="776.5" y1="184.5" x2="792.5" y2="184.5" marker-end="url(#ah)"/>
+  </g>
+  <text x="712.5" y="259" text-anchor="middle" class="bod">each block: 2 × (conv3 → BN → ReLU → dropout)</text>
+  <text x="712.5" y="278.5" text-anchor="middle" class="bod">+ identity skip, 96 channels</text>
+  <text x="712.5" y="297" text-anchor="middle" class="bod">receptive field 0.75 s</text>
+
+  <!-- 1x1 conv / GRU -->
+  <rect x="918" y="84" width="117" height="95" rx="7" fill="#E4EEF8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="976.5" y="106" text-anchor="middle" class="ttl">1×1 conv</text>
+  <text x="976.5" y="141.5" text-anchor="middle" class="bod">96 → 128</text>
+  <rect x="918" y="206" width="117" height="117" rx="7" fill="#E4EEF8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="976.5" y="227" text-anchor="middle" class="ttl">GRU</text>
+  <text x="976.5" y="263.5" text-anchor="middle" class="bod">128 units</text>
+  <text x="976.5" y="282" text-anchor="middle" class="bod">last state <tspan class="mi">h</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan></text>
+
+  <!-- Rhythm / Quality heads -->
+  <rect x="1077" y="84" width="278" height="102" rx="7" fill="#E6F2E8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="1216" y="108" text-anchor="middle" class="ttl">Rhythm head</text>
+  <text x="1216" y="141.5" text-anchor="middle" class="bod">linear 128 → 9, softmax</text>
+  <text x="1216" y="160.5" text-anchor="middle" class="bod">posterior <tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan></text>
+  <rect x="1077" y="221" width="278" height="102" rx="7" fill="#E6F2E8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="1216" y="245" text-anchor="middle" class="ttl">Quality head</text>
+  <text x="1216" y="278.5" text-anchor="middle" class="bod">128 → 64 → 1, sigmoid</text>
+  <text x="1216" y="297.5" text-anchor="middle" class="bod">quality score <tspan class="mi">q</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan></text>
+
+  <!-- section A arrows -->
+  <g stroke="#3d3d3d" stroke-width="1.7" fill="none">
+    <line x1="269" y1="185" x2="304.5" y2="185" marker-end="url(#ah)"/>
+    <line x1="509.5" y1="185" x2="534.5" y2="185" marker-end="url(#ah)"/>
+    <line x1="890" y1="132" x2="916.5" y2="132" marker-end="url(#ah)"/>
+    <line x1="976.5" y1="180.5" x2="976.5" y2="204" marker-end="url(#ah)"/>
+    <path d="M1057,135 V272 M1037,264.5 H1057"/>
+    <line x1="1057" y1="135" x2="1075.5" y2="135" marker-end="url(#ah)"/>
+    <line x1="1057" y1="272" x2="1075.5" y2="272" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- ================= group B : stopping controller ================= -->
+  <rect x="17.5" y="428.5" width="1362" height="335" rx="10" fill="none" stroke="#EAB89E" stroke-width="2.2" stroke-dasharray="8 5"/>
+  <text x="72" y="453" text-anchor="middle" class="tsec" fill="#CC3E0F">B</text>
+  <text x="100" y="453" class="tsec" fill="#CC3E0F">Stopping controller — is the prefix long enough?</text>
+
+  <!-- Action column -->
+  <text x="262" y="484.5" text-anchor="middle" font-size="15.5" font-weight="bold">Action</text>
+  <rect x="133" y="499" width="258" height="47" rx="9" fill="#ffffff" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="262" y="527.5" text-anchor="middle" class="wtx">wait 1 s</text>
+  <rect x="133" y="558.5" width="258" height="47" rx="9" fill="#ffffff" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="262" y="586.5" text-anchor="middle" class="wtx">wait 2 s (DQN only)</text>
+  <rect x="133" y="618" width="258" height="47" rx="9" fill="#E6F2E8" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="262" y="646" text-anchor="middle" class="wtx">stop: output argmax <tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan></text>
+  <rect x="133" y="677" width="258" height="47" rx="9" fill="#ffffff" stroke="#4f4f4f" stroke-width="1.7"/>
+  <text x="262" y="705" text-anchor="middle" class="wtx">abstain (DQN only)</text>
+  <text x="262" y="749.5" text-anchor="middle" font-size="14" font-style="italic">forced stop at the annotated segment end</text>
+
+  <!-- Rule box (left edge aligned with Learned, per reference) -->
+  <rect x="534" y="492" width="428" height="104" rx="8" fill="#ffffff" stroke="#437CBC" stroke-width="2.6"/>
+  <text x="748" y="521.5" text-anchor="middle" class="ttl">Rule: time-varying threshold (TT)</text>
+  <text x="748" y="549.5" text-anchor="middle" class="bod">stop if max <tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan><tspan dy="-3.5"> ≥ clip(</tspan><tspan class="mi">τ</tspan><tspan dy="3.5" font-size="10">0</tspan><tspan dy="-3.5"> + </tspan><tspan class="mi">b</tspan><tspan> (</tspan><tspan class="mi">w</tspan><tspan> − 1)/9), otherwise wait 1 s</tspan></text>
+  <text x="748" y="571.5" text-anchor="middle" class="bod">2 parameters selected by validation reward</text>
+  <text x="748" y="613" text-anchor="middle" font-size="14.5" font-style="italic">or</text>
+
+  <!-- Learned box -->
+  <rect x="534" y="618" width="428" height="119" rx="8" fill="#ffffff" stroke="#D15126" stroke-width="2.6"/>
+  <text x="748" y="644" text-anchor="middle" class="ttl">Learned: Double-Dueling DQN</text>
+  <text x="748" y="678" text-anchor="middle" class="bod">MLP 15 → 256 → 256 → value <tspan class="mi">V</tspan>(<tspan class="mi">s</tspan>) + advantage <tspan class="mi">A</tspan>(<tspan class="mi">s</tspan>, <tspan class="mi">a</tspan>)</text>
+  <text x="748" y="698" text-anchor="middle" class="bod">greedy <tspan class="mi">a</tspan> = argmax <tspan class="mi">Q</tspan>(<tspan class="mi">s</tspan>, <tspan class="mi">a</tspan>); 71 k parameters</text>
+  <text x="748" y="717.5" text-anchor="middle" class="bod">reward +1 correct, −2 wrong, −0.03 s<tspan dy="-4.5" font-size="10">−1</tspan><tspan dy="4.5">; abstain +0.3 / −1</tspan></text>
+
+  <!-- State box -->
+  <rect x="1077" y="495" width="278" height="239" rx="8" fill="#FBE9E1" stroke="#4f4f4f" stroke-width="1.5"/>
+  <text x="1216" y="519" text-anchor="middle" class="ttl">State <tspan class="mi">S</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan><tspan dy="-3.5"> (15 values)</tspan></text>
+  <text x="1216" y="553" text-anchor="middle" class="bod">posterior <tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan><tspan dy="-3.5"> (9)</tspan></text>
+  <text x="1216" y="573" text-anchor="middle" class="bod">max <tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan><tspan dy="-3.5"> and top-2 margin</tspan></text>
+  <text x="1216" y="593" text-anchor="middle" class="bod">entropy <tspan class="mi">H</tspan>(<tspan class="mi">p</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan><tspan dy="-3.5">)</tspan></text>
+  <text x="1216" y="613" text-anchor="middle" class="bod">quality <tspan class="mi">q</tspan><tspan class="mi" dy="3.5" font-size="10">w</tspan></text>
+  <text x="1216" y="632.5" text-anchor="middle" class="bod">elapsed time <tspan class="mi">w</tspan>/10, bias</text>
+  <text x="1216" y="672" text-anchor="middle" class="bod">no access to when the</text>
+  <text x="1216" y="692" text-anchor="middle" class="bod">annotated segment ends</text>
+
+  <!-- section B arrows -->
+  <g stroke="#3d3d3d" stroke-width="1.7" fill="none">
+    <line x1="1216.5" y1="325" x2="1216.5" y2="493" marker-end="url(#ah)"/>
+    <line x1="1077" y1="544.5" x2="964" y2="544.5" marker-end="url(#ah)"/>
+    <line x1="1077" y1="677.5" x2="963.5" y2="677.5" marker-end="url(#ah)"/>
+    <line x1="534" y1="549" x2="393" y2="581.5" marker-end="url(#ah)"/>
+    <line x1="534" y1="678" x2="393" y2="642.5" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- blue wait feedback loop -->
+  <g stroke="#2566B1" stroke-width="2.2" fill="none">
+    <path d="M133,523 H40.5"/>
+    <path d="M133,582 H40.5 V394.5 H165.5 V325" marker-end="url(#ahb)"/>
+  </g>
+  <text x="192" y="399" font-size="15" letter-spacing="0.3" fill="#2566B1">wait:  <tspan class="mi">w</tspan> ← <tspan class="mi">w</tspan> + 1 or <tspan class="mi">w</tspan> + 2  →  classify the longer prefix</text>
+
+  </g>
+</svg>

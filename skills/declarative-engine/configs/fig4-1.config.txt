@@ -1,0 +1,47 @@
+// 论文网络总体架构图示例：ACF-YOLO（v2：栏目标题 + 图例 + 节点注解 + nat 窄节点）
+@head 1: 主干网络
+@head 2: 颈部：自顶向下
+@head 3: 颈部：自底向上
+@head 4: 检测头
+@legend blue: P2 高分辨率检测分支, orange: ACR 非对称容量重分配, green: CGF 互补门控融合
+
+输入: 输入图像 640×640 @r1c1
+conv1: Conv (P1/2, 16) @r2c1
+conv2: Conv + C3k2 | (P2/4, 64) @r3c1
+conv3: Conv + C3k2 | (P3/8, 128) @r4c1
+conv4: Conv + C3k2 | (P4/16, 128) @r5c1
+sppf: Conv + C3k2 + SPPF + C2PSA | (P5/32, 256) @r6c1
+upCGF: Up + CGF @r3c2 nat !green
+acr64: C3k2 (32→64) @r3c2 nat !orange
+up64: Up + Concat + C3k2 (64) @r4c2
+up128: Up + Concat + C3k2 (128) @r5c2
+bu64: Conv + Concat + C3k2 (64) @r4c3
+bu128: Conv + Concat + C3k2 (128) @r5c3
+bu192: Conv + Concat + C3k2 (256→192) @r6c3 !orange
+headP2: P2 检测头 | 160×160 @r3c4 !blue
+headP3: P3 检测头 | 80×80 @r4c4
+headP4: P4 检测头 | 40×40 @r5c4
+headP5: P5 检测头 | 20×20 | 一对一分支输出（无需 NMS） @r6c4
+
+输入 -> conv1
+conv1 -> conv2
+conv2 -> conv3
+conv3 -> conv4
+conv4 -> sppf
+conv2 -> upCGF !green
+up64 -> upCGF !green
+up128 -> up64
+conv3 -> up64
+conv4 -> up128
+sppf -> up128
+sppf -> bu192
+upCGF -> acr64
+acr64 -> headP2 !blue
+acr64 -> bu64 !blue
+up64 -> bu64
+bu64 -> headP3
+bu64 -> bu128
+up128 -> bu128
+bu128 -> headP4
+bu128 -> bu192
+bu192 -> headP5

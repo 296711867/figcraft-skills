@@ -1,0 +1,28 @@
+// 论文方法框架图示例：ACF-YOLO 知识蒸馏训练框架
+@caption 推理时一对多分支、教师模型与全部损失均被移除，学生模型的结构和计算量保持不变
+
+输入: 输入图像 | 640×640 @r1-3c1
+教师: 教师模型 YOLO26s-P2 | （参数固定） @r1c2
+tOut: 一对多稠密输出 | b̂^{T}, z^{T} @r1c3
+wMax: 锚点权重 | w = max σ(z_{c}) @r1c4
+sOut: 一对多稠密分支 | b̂^{S}, z^{S} @r2c3 !blue
+kdL: 输出蒸馏损失 | L_{box} + L_{cls} @r2c4 !orange
+学生: 学生模型 ACF-YOLO @r3c2 !green
+detL: 检测损失 | （真值监督） @r3c4
+o2o: 一对一分支 | （推理输出） @r4c3
+
+@group 仅训练阶段使用 : dashed
+教师 tOut wMax sOut kdL
+@end
+
+输入 -> 教师
+输入 -> 学生
+教师 -> tOut
+tOut -> wMax
+wMax -> kdL !orange
+tOut -> kdL !orange
+sOut -> kdL !orange
+sOut -> detL
+学生 -> sOut !blue
+学生 -> o2o
+o2o -> detL

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="1580" viewBox="0 0 1300 1580">
+  <!-- 图1-1 技术路线图 -->
+  <style>
+    text { font-family: 'Times New Roman', 'SimSun', serif; fill: #111; }
+    .bd { font-size: 21px; }
+    .mu { fill: #52514e; }
+  </style>
+  <defs>
+    <marker id="ah" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10.5" refY="5" orient="auto">
+      <path d="M0,0 L11,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+  <rect width="1300" height="1580" fill="#fff"/>
+
+  <!-- ===== 阶段带 ===== -->
+  <g fill="none" stroke="#9a9994" stroke-width="1.6" stroke-dasharray="7 4">
+    <rect x="60" y="40" width="1220" height="296" rx="10"/>
+    <rect x="60" y="364" width="1220" height="372" rx="10"/>
+    <rect x="60" y="765" width="1220" height="370" rx="10"/>
+    <rect x="60" y="1164" width="1220" height="356" rx="10"/>
+  </g>
+  <g class="mu" font-size="22" text-anchor="middle">
+    <text x="1218" y="80">第三章</text>
+    <text x="1218" y="404">第四章</text>
+    <text x="1218" y="805">第五章</text>
+    <text x="1218" y="1204">第六章</text>
+  </g>
+  <!-- 左侧竖排阶段名 -->
+  <g font-size="24" text-anchor="middle" fill="#111">
+    <text x="116" y="136">问</text><text x="116" y="172">题</text><text x="116" y="208">分</text><text x="116" y="244">析</text>
+    <text x="116" y="496">模</text><text x="116" y="532">型</text><text x="116" y="568">改</text><text x="116" y="604">进</text>
+    <text x="116" y="896">部</text><text x="116" y="932">署</text><text x="116" y="968">优</text><text x="116" y="1004">化</text>
+    <text x="116" y="1288">系</text><text x="116" y="1324">统</text><text x="116" y="1360">实</text><text x="116" y="1396">现</text>
+  </g>
+
+  <!-- ===== 带内流程框 ===== -->
+  <g font-size="21" text-anchor="middle">
+    <!-- 问题分析 -->
+    <g fill="#f4f3ef" stroke="#8a8984" stroke-width="1.6">
+      <rect x="208" y="115" width="262" height="116" rx="8"/>
+      <rect x="504" y="115" width="262" height="116" rx="8"/>
+      <rect x="800" y="115" width="262" height="116" rx="8"/>
+      <rect x="205" y="256" width="860" height="56" rx="8"/>
+    </g>
+    <text x="339" y="163">BDD100K 数据集</text><text x="339" y="193">转换与清洗</text>
+    <text x="635" y="163">尺度、类别与</text><text x="635" y="193">场景分布统计</text>
+    <text x="931" y="163">YOLO26n 基准</text><text x="931" y="193">分尺度精度与漏检</text>
+    <text x="635" y="291" font-size="20">难点：高分辨率特征缺失；融合缺乏选择性；精度与部署代价矛盾</text>
+
+    <!-- 模型改进 -->
+    <rect x="208" y="448" width="262" height="116" rx="8" fill="#dbe8f8" stroke="#2a78d6" stroke-width="2.2"/>
+    <rect x="504" y="448" width="262" height="116" rx="8" fill="#fbe1d6" stroke="#eb6834" stroke-width="2.2"/>
+    <rect x="800" y="448" width="262" height="116" rx="8" fill="#d3f0e5" stroke="#1baf7a" stroke-width="2.2"/>
+    <text x="339" y="496">增加 P2</text><text x="339" y="526">高分辨率检测分支</text>
+    <text x="635" y="496">非对称容量重分配</text><text x="635" y="526">ACR</text>
+    <text x="931" y="496">互补门控融合</text><text x="931" y="526">CGF（PRR + GCG）</text>
+    <rect x="461" y="630" width="348" height="62" rx="8" fill="#f4f3ef" stroke="#55544f" stroke-width="2.6"/>
+    <text x="635" y="669" font-size="24" font-weight="bold">ACF-YOLO</text>
+
+    <!-- 部署优化 -->
+    <g fill="#f4f3ef" stroke="#8a8984" stroke-width="1.6">
+      <rect x="208" y="848" width="262" height="116" rx="8"/>
+      <rect x="504" y="848" width="262" height="116" rx="8"/>
+      <rect x="800" y="848" width="262" height="116" rx="8"/>
+    </g>
+    <text x="339" y="896">TensorRT</text><text x="339" y="926">逐层延迟剖析</text>
+    <text x="635" y="896">结构轻量化</text><text x="635" y="926">方案对比</text>
+    <text x="931" y="896">置信度加权的</text><text x="931" y="926">输出蒸馏</text>
+    <rect x="780" y="1030" width="302" height="62" rx="8" fill="#f4f3ef" stroke="#55544f" stroke-width="2.6"/>
+    <text x="931" y="1069" font-size="24" font-weight="bold">ACF-YOLO-KD</text>
+    <text x="560" y="1021" font-size="19" class="mu">压缩不等于加速，选择不改变推理结构的蒸馏</text>
+
+    <!-- 系统实现 -->
+    <g fill="#f4f3ef" stroke="#8a8984" stroke-width="1.6">
+      <rect x="208" y="1232" width="262" height="116" rx="8"/>
+      <rect x="504" y="1232" width="262" height="116" rx="8"/>
+      <rect x="800" y="1232" width="262" height="116" rx="8"/>
+      <rect x="310" y="1424" width="650" height="58" rx="8"/>
+    </g>
+    <text x="339" y="1280">ONNX 导出与</text><text x="339" y="1310">TensorRT FP16 引擎</text>
+    <text x="635" y="1280">Jetson Orin NX</text><text x="635" y="1310">检测系统</text>
+    <text x="931" y="1280">延迟、功耗与</text><text x="931" y="1310">精度一致性测试</text>
+    <text x="635" y="1460">道路图像与行车视频检测</text>
+  </g>
+
+  <!-- ===== 连线 ===== -->
+  <g stroke="#52514e" stroke-width="1.7" fill="none">
+    <line x1="470" y1="173" x2="500" y2="173" marker-end="url(#ah)"/>
+    <line x1="766" y1="173" x2="796" y2="173" marker-end="url(#ah)"/>
+    <line x1="931" y1="231" x2="931" y2="252" marker-end="url(#ah)"/>
+    <line x1="635" y1="312" x2="635" y2="444" marker-end="url(#ah)"/>
+    <line x1="470" y1="506" x2="500" y2="506" marker-end="url(#ah)"/>
+    <line x1="766" y1="506" x2="796" y2="506" marker-end="url(#ah)"/>
+    <path d="M339,564 V602 H502 V626" marker-end="url(#ah)"/>
+    <line x1="635" y1="564" x2="635" y2="626" marker-end="url(#ah)"/>
+    <path d="M931,564 V602 H768 V626" marker-end="url(#ah)"/>
+    <path d="M635,692 V750 H339 V844" marker-end="url(#ah)"/>
+    <line x1="470" y1="906" x2="500" y2="906" marker-end="url(#ah)"/>
+    <line x1="766" y1="906" x2="796" y2="906" marker-end="url(#ah)"/>
+    <line x1="931" y1="964" x2="931" y2="1026" marker-end="url(#ah)"/>
+    <path d="M780,1061 H339 V1228" marker-end="url(#ah)"/>
+    <line x1="470" y1="1290" x2="500" y2="1290" marker-end="url(#ah)"/>
+    <line x1="766" y1="1290" x2="796" y2="1290" marker-end="url(#ah)"/>
+    <line x1="931" y1="1348" x2="931" y2="1420" marker-end="url(#ah)"/>
+  </g>
+</svg>
