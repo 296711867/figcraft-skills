@@ -1,5 +1,13 @@
 <div align="center">
 
+🌐 本开源项目已链接并认可 <a href="https://linux.do/"><strong>LINUX DO</strong></a> 社区
+
+</div>
+
+---
+
+<div align="center">
+
 # 🎨 figcraft-skills
 
 **Agent skills for publication-quality paper figures**
