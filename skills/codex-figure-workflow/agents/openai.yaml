@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex 架构图完整流程"
+  short_description: "从真实项目到参数化 SVG、高清 PNG 和视觉验收，附网站实战案例"
+  default_prompt: "使用 $codex-figure-workflow 分析当前项目，制作可编辑的架构图并完成导出与视觉验收。"

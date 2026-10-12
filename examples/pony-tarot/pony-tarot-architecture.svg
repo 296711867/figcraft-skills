@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1220" viewBox="0 0 1600 1220" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">小马利亚魔法塔罗当前实现架构</title>
+<desc id="figure-desc">静态构建和部署，浏览器中的交互、核心逻辑、静态内容及本地存储，箭头表示调用或读取方向。</desc>
+<defs><marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M 0 0 L 7.5 4.5 L 0 9 Z" fill="#8C99A8"/></marker></defs>
+<rect width="1600" height="1220" fill="#FFFFFF"/>
+<g font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif">
+<text x="80" y="60" font-size="34" font-weight="600" text-anchor="start" fill="#263442">小马利亚魔法塔罗｜当前实现架构</text>
+<text x="80" y="94" font-size="17" font-weight="400" text-anchor="start" fill="#647386">双主题家园 · 78 张牌义 · 免费使用 · 浏览器本地运行</text>
+<rect x="40" y="290" width="1520" height="822" rx="14" fill="none" stroke="#D6DDE5" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="64" y="277" width="260" height="27" fill="#FFFFFF"/>
+<text x="76" y="298" font-size="16" font-weight="500" text-anchor="start" fill="#647386">浏览器运行边界</text>
+<text x="285" y="342" font-size="23" font-weight="600" text-anchor="middle" fill="#7657A4">页面与交互</text>
+<text x="285" y="367" font-size="12" font-weight="400" text-anchor="middle" fill="#647386">PRESENTATION</text>
+<text x="800" y="342" font-size="23" font-weight="600" text-anchor="middle" fill="#327E82">逻辑与状态</text>
+<text x="800" y="367" font-size="12" font-weight="400" text-anchor="middle" fill="#647386">CLIENT LOGIC</text>
+<text x="1315" y="342" font-size="23" font-weight="600" text-anchor="middle" fill="#B28A46">内容与存储</text>
+<text x="1315" y="367" font-size="12" font-weight="400" text-anchor="middle" fill="#647386">LOCAL RESOURCES</text>
+<path d="M 1315.0 230 V 287" stroke="#8C99A8" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+<text x="1333.0" y="264" font-size="13" font-weight="400" text-anchor="start" fill="#647386">首次加载</text>
+<path d="M 492 183.0 L 593 183.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="542.5" y="171.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">构建</text>
+<path d="M 1007 183.0 L 1108 183.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="1057.5" y="171.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">提供文件</text>
+<path d="M 492 475.0 L 593 475.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="542.5" y="463.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">切换外观</text>
+<path d="M 1007 475.0 L 1108 475.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="1057.5" y="463.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">加载资源</text>
+<path d="M 492 727.5 L 593 727.5" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="542.5" y="715.5" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">发起占卜</text>
+<path d="M 1007 727.5 L 1108 727.5" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="1057.5" y="715.5" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">读取内容</text>
+<path d="M 492 980.0 L 593 980.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="542.5" y="968.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">调用接口</text>
+<path d="M 1007 980.0 L 1108 980.0" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="1057.5" y="968.0" font-size="13" font-weight="400" text-anchor="middle" fill="#647386">读写本地</text>
+<path d="M 285.0 557 L 285.0 608" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="304.0" y="587.5" font-size="13" font-weight="400" text-anchor="start" fill="#647386">打开面板</text>
+<path d="M 285.0 847 L 285.0 898" fill="none" stroke="#8C99A8" stroke-width="1.6" marker-end="url(#arrow)"/><text x="304.0" y="877.5" font-size="13" font-weight="400" text-anchor="start" fill="#647386">保存 / 偏好</text>
+<rect x="80" y="138" width="410" height="90" rx="9" fill="#F5F7F9" stroke="#667487" stroke-width="1.4"/>
+<text x="103" y="171" font-size="21" font-weight="600" text-anchor="start" fill="#667487">Next.js · React · TypeScript</text>
+<text x="103" y="197" font-size="14" font-weight="400" text-anchor="start" fill="#647386">开发源码 / pony-tarot</text>
+<text x="103" y="218" font-size="16" font-weight="400" text-anchor="start" fill="#263442">npm run build</text>
+<rect x="595" y="138" width="410" height="90" rx="9" fill="#F5F7F9" stroke="#667487" stroke-width="1.4"/>
+<text x="618" y="171" font-size="21" font-weight="600" text-anchor="start" fill="#667487">静态导出</text>
+<text x="618" y="197" font-size="14" font-weight="400" text-anchor="start" fill="#647386">next.config.ts · output: export</text>
+<text x="618" y="218" font-size="16" font-weight="400" text-anchor="start" fill="#263442">out/：HTML / CSS / JS / 图片 / 字体</text>
+<rect x="1110" y="138" width="410" height="90" rx="9" fill="#F5F7F9" stroke="#667487" stroke-width="1.4"/>
+<text x="1133" y="171" font-size="21" font-weight="600" text-anchor="start" fill="#667487">静态 HTTP 服务器</text>
+<text x="1133" y="197" font-size="14" font-weight="400" text-anchor="start" fill="#647386">当前：本地预览 / 127.0.0.1:3000</text>
+<text x="1133" y="218" font-size="16" font-weight="400" text-anchor="start" fill="#263442">可部署至静态托管平台</text>
+<rect x="80" y="395" width="410" height="160" rx="9" fill="#F4F0FA" stroke="#7657A4" stroke-width="1.4"/>
+<text x="103" y="428" font-size="21" font-weight="600" text-anchor="start" fill="#7657A4">家园首页与会话编排</text>
+<text x="103" y="454" font-size="14" font-weight="400" text-anchor="start" fill="#647386">Home · app/page.tsx</text>
+<text x="103" y="485" font-size="17" font-weight="400" text-anchor="start" fill="#263442">建筑导航 · 打开 / 关闭功能面板</text>
+<text x="103" y="511" font-size="17" font-weight="400" text-anchor="start" fill="#263442">React 状态：面板 / 设置 / 历史</text>
+<text x="103" y="537" font-size="17" font-weight="400" text-anchor="start" fill="#263442">问题与抽牌结果在浏览器内处理</text>
+<rect x="595" y="395" width="410" height="160" rx="9" fill="#EFF7F6" stroke="#327E82" stroke-width="1.4"/>
+<text x="618" y="428" font-size="21" font-weight="600" text-anchor="start" fill="#327E82">主题与交互表现</text>
+<text x="618" y="454" font-size="14" font-weight="400" text-anchor="start" fill="#647386">ThemeSwitch · globals.css</text>
+<text x="618" y="485" font-size="17" font-weight="400" text-anchor="start" fill="#263442">明亮 / 暗色 · 用户选择即刻生效</text>
+<text x="618" y="511" font-size="17" font-weight="400" text-anchor="start" fill="#263442">桌面 / 手机布局 · 标题渐变遮罩</text>
+<text x="618" y="537" font-size="17" font-weight="400" text-anchor="start" fill="#263442">翻牌 / 光晕 / 星尘 · 可关闭动效</text>
+<rect x="1110" y="395" width="410" height="160" rx="9" fill="#FCF6EA" stroke="#B28A46" stroke-width="1.4"/>
+<text x="1133" y="428" font-size="21" font-weight="600" text-anchor="start" fill="#B28A46">插画与卡面资源</text>
+<text x="1133" y="454" font-size="14" font-weight="400" text-anchor="start" fill="#647386">public/art · public/cards · fonts</text>
+<text x="1133" y="485" font-size="17" font-weight="400" text-anchor="start" fill="#263442">日景 / 夜景 × 桌面 / 手机</text>
+<text x="1133" y="511" font-size="17" font-weight="400" text-anchor="start" fill="#263442">卡面 ID → manifest.json</text>
+<text x="1133" y="537" font-size="17" font-weight="400" text-anchor="start" fill="#263442">正式塔罗卡面由用户后续提供</text>
+<rect x="80" y="610" width="410" height="235" rx="9" fill="#F4F0FA" stroke="#7657A4" stroke-width="1.4"/>
+<text x="103" y="643" font-size="21" font-weight="600" text-anchor="start" fill="#7657A4">功能面板</text>
+<text x="103" y="669" font-size="14" font-weight="400" text-anchor="start" fill="#647386">单页内打开，不是五个独立路由</text>
+<text x="103" y="700" font-size="17" font-weight="400" text-anchor="start" fill="#263442">ReadingPanel · 今日一牌 / 三牌占卜</text>
+<text x="103" y="726" font-size="17" font-weight="400" text-anchor="start" fill="#263442">LibraryPanel · 78 张图鉴与牌义</text>
+<text x="103" y="752" font-size="17" font-weight="400" text-anchor="start" fill="#263442">JournalPanel · 本地魔法记录</text>
+<text x="103" y="778" font-size="17" font-weight="400" text-anchor="start" fill="#263442">SettingsPanel · 主题 / 动效 / 逆位</text>
+<text x="103" y="804" font-size="17" font-weight="400" text-anchor="start" fill="#263442">PanelDialog / TarotCard · 通用交互</text>
+<rect x="595" y="610" width="410" height="235" rx="9" fill="#EFF7F6" stroke="#327E82" stroke-width="1.4"/>
+<text x="618" y="643" font-size="21" font-weight="600" text-anchor="start" fill="#327E82">抽牌与本地解读</text>
+<text x="618" y="669" font-size="14" font-weight="400" text-anchor="start" fill="#647386">lib/engine.ts</text>
+<text x="618" y="700" font-size="17" font-weight="400" text-anchor="start" fill="#263442">drawCards · Fisher–Yates 无重复抽牌</text>
+<text x="618" y="726" font-size="17" font-weight="400" text-anchor="start" fill="#263442">dailyDraw · 按本地日期固定每日牌</text>
+<text x="618" y="752" font-size="17" font-weight="400" text-anchor="start" fill="#263442">interpret · 拼接牌义与角色话术</text>
+<text x="618" y="778" font-size="17" font-weight="400" text-anchor="start" fill="#263442">makeReading · 问题 / 牌 / 解读快照</text>
+<rect x="1110" y="610" width="410" height="235" rx="9" fill="#FCF6EA" stroke="#B28A46" stroke-width="1.4"/>
+<text x="1133" y="643" font-size="21" font-weight="600" text-anchor="start" fill="#B28A46">牌库与角色内容</text>
+<text x="1133" y="669" font-size="14" font-weight="400" text-anchor="start" fill="#647386">data/cards.ts · data/personas.ts</text>
+<text x="1133" y="700" font-size="17" font-weight="400" text-anchor="start" fill="#263442">78 张牌：正逆位关键词与牌义</text>
+<text x="1133" y="726" font-size="17" font-weight="400" text-anchor="start" fill="#263442">M6：六种开场与收尾语气</text>
+<text x="1133" y="752" font-size="17" font-weight="400" text-anchor="start" fill="#263442">角色切换不改变抽到的牌</text>
+<text x="1133" y="778" font-size="17" font-weight="400" text-anchor="start" fill="#263442">当前采用本地模板，不调用 AI</text>
+<rect x="80" y="900" width="410" height="160" rx="9" fill="#F4F0FA" stroke="#7657A4" stroke-width="1.4"/>
+<text x="103" y="933" font-size="21" font-weight="600" text-anchor="start" fill="#7657A4">保存与偏好操作</text>
+<text x="103" y="959" font-size="14" font-weight="400" text-anchor="start" fill="#647386">Home 回调 · 功能面板触发</text>
+<text x="103" y="990" font-size="17" font-weight="400" text-anchor="start" fill="#263442">保存 / 删除 / 清空 / 文本导出</text>
+<text x="103" y="1016" font-size="17" font-weight="400" text-anchor="start" fill="#263442">主题 / 动效 / 逆位偏好</text>
+<text x="103" y="1042" font-size="17" font-weight="400" text-anchor="start" fill="#263442">存储失败提示，不阻止查看结果</text>
+<rect x="595" y="900" width="410" height="160" rx="9" fill="#EFF7F6" stroke="#327E82" stroke-width="1.4"/>
+<text x="618" y="933" font-size="21" font-weight="600" text-anchor="start" fill="#327E82">本地存储接口</text>
+<text x="618" y="959" font-size="14" font-weight="400" text-anchor="start" fill="#647386">lib/storage.ts</text>
+<text x="618" y="990" font-size="17" font-weight="400" text-anchor="start" fill="#263442">readHistory / writeHistory</text>
+<text x="618" y="1016" font-size="17" font-weight="400" text-anchor="start" fill="#263442">readSettings / writeSettings</text>
+<text x="618" y="1042" font-size="17" font-weight="400" text-anchor="start" fill="#263442">结果快照与设置分别读写</text>
+<rect x="1110" y="900" width="410" height="160" rx="9" fill="#FCF6EA" stroke="#B28A46" stroke-width="1.4"/>
+<text x="1133" y="933" font-size="21" font-weight="600" text-anchor="start" fill="#B28A46">浏览器 localStorage</text>
+<text x="1133" y="959" font-size="14" font-weight="400" text-anchor="start" fill="#647386">不需要账号、云数据库或后端 API</text>
+<text x="1133" y="990" font-size="17" font-weight="400" text-anchor="start" fill="#263442">记录：最多 50 条结果快照</text>
+<text x="1133" y="1016" font-size="17" font-weight="400" text-anchor="start" fill="#263442">偏好：主题 / 动效 / 逆位</text>
+<text x="1133" y="1042" font-size="17" font-weight="400" text-anchor="start" fill="#263442">清理浏览器数据会丢失记录</text>
+<text x="80" y="1152" font-size="16" font-weight="400" text-anchor="start" fill="#647386">箭头表示调用、读取或写入方向；界面与逻辑在同一个前端应用中协作。</text>
+<text x="80" y="1186" font-size="16" font-weight="400" text-anchor="start" fill="#647386">实际状态：无业务后端，问题不发送到 AI；正式卡面通过 ID 映射接入。</text>
+<text x="1520" y="1186" font-size="13" font-weight="400" text-anchor="end" fill="#647386">源码快照 · 2026-10-12</text>
+</g>
+</svg>

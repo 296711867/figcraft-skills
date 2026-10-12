@@ -1,0 +1,10 @@
+{
+  "figure": "pony-tarot-architecture.png",
+  "source": "make_architecture.py",
+  "workflow": "figcraft parametric-diagram + visual-acceptance",
+  "canvas": { "width": 3200, "height": 2440, "dpi": 600 },
+  "geometry": "All node text fits the measured Microsoft YaHei width budget.",
+  "tiling": { "verticalDifference": 18.9, "horizontalDifference": 18.0, "result": "ok" },
+  "independentVisualJudge": { "verdict": "PASS", "issues": [] },
+  "date": "2026-10-12"
+}

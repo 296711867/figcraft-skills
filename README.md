@@ -6,7 +6,7 @@
 **让 AI Agent 稳定产出印刷级论文配图的技能包**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![Skills](https://img.shields.io/badge/skills-5-7B61FF)
+![Skills](https://img.shields.io/badge/skills-7-7B61FF)
 ![Figures validated](https://img.shields.io/badge/figures%20validated-25%2B-2EA44F)
 ![Tested with](https://img.shields.io/badge/tested%20with-GLM--5.3--Flash-D9630E)
 
@@ -15,6 +15,12 @@
 </div>
 
 ---
+
+## Codex 完整流程与实战
+
+新增 [Codex 制图指南](CODEX.md) 与 [codex-figure-workflow](skills/codex-figure-workflow/SKILL.md)：从项目事实梳理到参数化 SVG、浏览器导出和独立视觉验收。附 [小马宝莉塔罗网站实战](examples/pony-tarot/CASE.md)、可重生成图源和结果图。
+
+![Codex 架构图实战](examples/pony-tarot/pony-tarot-architecture.png)
 
 ## Why / 为什么
 
@@ -31,10 +37,12 @@
 | 📷 | ![ECG before/after](assets/before_after_ecg.png) | |
 | | *Bitmap reference → probed-geometry SVG (every box/text/arrow at probed coordinates)* | |
 
-## The five skills / 五个技能
+## The six skills / 六个技能
 
 | Skill | Use when | What you get |
 |---|---|---|
+| [`codex-figure-workflow`](skills/codex-figure-workflow/SKILL.md) | End-to-end project diagrams in Codex | Source-backed structure → SVG/PNG → acceptance, with a real website case |
+| [`game-arch-diagram`](skills/game-arch-diagram/SKILL.md) | **Software/game architecture figures** — layered bands, state machine, feedback loops | Design language (rider-chip band titles, semantic tints + accent bars, update-order badges, white-halo labels) + 6-defect collision catalogue from real judge rounds |
 | [`hand-svg-structure`](skills/hand-svg-structure/SKILL.md) | Replicating a **bitmap** structure figure (block diagram / flowchart / network) | `probe_geometry.py` (connected-component boxes, ring-scan circles, text-row baselines, color extraction) + `prepare_export_pages.py` (tile-safe browser export pages) |
 | [`parametric-diagram`](skills/parametric-diagram/SKILL.md) | Drawing a structure figure **from scratch** that will be revised | `make_fig.py` — geometry/topology/style declared in three blocks; the script is the single source of truth |
 | [`data-figures-rerender`](skills/data-figures-rerender/SKILL.md) | **Data figures** (scatter/bar/slope) — points are real results | Re-render from the same frozen tables, encodings kept item-by-item; SVG + 600 dpi PNG; [`PITFALLS.md`](skills/data-figures-rerender/PITFALLS.md) with 10 field-tested traps |
@@ -43,11 +51,15 @@
 
 | 技能 | 何时用 | 产出 |
 |---|---|---|
+| `codex-figure-workflow` | Codex 从源码完成整套架构图 | 完整指南、参数化图源、结果图和验收实战 |
+| `game-arch-diagram` | 软件 / 游戏架构图（分层带 + 状态机 + 反馈回路） | 设计语言七件套（骑缝标题牌 / 语义色浅底 / 色条 / 顺序徽标 / 白描边标签）+ 视觉裁判实战缺陷库 |
 | `hand-svg-structure` | 复刻位图结构图（框图/流程/网络/示意） | 位图几何配色程序化探测 + 防平铺导出页工具 |
 | `parametric-diagram` | 从零画会反复修改的结构图 | 参数化脚本即图源：几何/拓扑/样式三段声明，改声明重跑即再生 |
 | `data-figures-rerender` | 数据图（散点/柱状/斜率）——点是真数据 | 同一批冻结表格重渲染，编码逐项保持；绝不手挪数据点 |
 | `declarative-engine` | 网格型框图/网络总览/部署流程图 | 声明式引擎配置语法 + 三份真实论文图配置 |
 | `visual-acceptance` | 交付前必过 | 活页面截屏、平铺自检、独立视觉裁判逐字对照、按像素证据修根因 |
+
+Codex 新增组合入口：[codex-figure-workflow](skills/codex-figure-workflow/SKILL.md)，适用于基于实际项目制作结构图并完成整套交付。它复用以上路线，不替代它们。
 
 ## More before/after / 更多对比
 
@@ -66,6 +78,7 @@
 | Journal submission figures (7 + graphical abstract) | 8 | 8/8 PASS, first round |
 | Thesis architecture figures (redrawn) | 11 | 11/11 PASS after 2 rounds |
 | Single-figure replications (ECG pipeline, MLP) | 2 | PASS |
+| Game architecture figure (design-polish rounds) | 1 | PASS after 2 judge rounds — 6 collision defects catalogued into [`game-arch-diagram`](skills/game-arch-diagram/SKILL.md) |
 
 All accepted figures shipped as **SVG (vector) + 600 dpi PNG**, judge-verified string-by-string and arrow-by-arrow against their references.
 
@@ -88,9 +101,9 @@ Then just ask your agent: *"Replicate this reference figure as a print-quality S
 
 ## Tested with / 实测环境
 
-These skills are authored and battle-tested end-to-end with an agent driven by **GLM-5.3-Flash** (ZCode). The workflow is model-agnostic — any agent that can read/write files, render pages in a browser, and dispatch a vision judge will do.
+The original paper cases were tested with **GLM-5.3-Flash** (ZCode). The added website architecture case was completed in **Codex desktop**. The workflow is model-agnostic.
 
-本技能包由 **GLM-5.3-Flash**（ZCode）驱动完成全部实战与验收；方法不绑定模型——任何具备文件读写、浏览器渲染页面与视觉裁判派发能力的 Agent 均可使用。
+原有论文案例由 **GLM-5.3-Flash**（ZCode）完成；新增网站架构图案例在 **Codex 桌面环境**完成。方法不绑定模型——具备文件读写、浏览器渲染与独立视觉检查能力的 Agent 均可使用。
 
 ## Repository layout / 目录
 
@@ -101,7 +114,11 @@ figcraft-skills/
 │   ├── parametric-diagram/     # make_fig.py template + example
 │   ├── data-figures-rerender/  # re-render template + PITFALLS.md
 │   ├── declarative-engine/     # config syntax + manuscript configs
-│   └── visual-acceptance/      # check_tiling.py + judge templates
+│   ├── visual-acceptance/      # check_tiling.py + judge templates
+│   ├── codex-figure-workflow/   # Codex end-to-end entry
+│   └── game-arch-diagram/      # architecture design language + defect catalogue
+├── examples/pony-tarot/         # Codex case, sources, renders, evidence
+├── CODEX.md                    # Codex workflow guide
 ├── assets/                     # before/after composites
 ├── METHOD.md                   # the 8 principles behind every route
 └── LICENSE                     # MIT
