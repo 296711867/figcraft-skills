@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1400" viewBox="0 0 1720 1400">
+  <defs>
+    <marker id="ah-52514e" markerUnits="userSpaceOnUse" markerWidth="13.5" markerHeight="10.5" refX="12.0" refY="5.25" orient="auto"><path d="M0,0 L10.5,5.25 L0,10.5 z" fill="#52514e"/></marker>
+    <marker id="ah-eb6834" markerUnits="userSpaceOnUse" markerWidth="13.5" markerHeight="10.5" refX="12.0" refY="5.25" orient="auto"><path d="M0,0 L10.5,5.25 L0,10.5 z" fill="#eb6834"/></marker>
+  </defs>
+  <rect width="1720" height="1400" fill="#ffffff"/>
+  <text x="1680" y="52" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="34" font-weight="bold" fill="#111111">字狂潮 v2.3 · 游戏架构</text>
+  <text x="1680" y="80" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16.5" fill="#52514e">p5.js 割草木鸽 · 浏览器 + 微信小游戏双端</text>
+  <rect x="90" y="100" width="1210" height="130" rx="14" fill="#8a8984" fill-opacity="0.05" stroke="#8a8984" stroke-width="1.8" stroke-dasharray="9,6"/>
+  <rect x="106" y="84" width="86" height="32" rx="8" fill="#ffffff" stroke="#8a8984" stroke-width="1.6"/>
+  <text x="149" y="105" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#8a8984">输入层</text>
+  <text x="1284" y="126" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14" fill="#52514e">事件驱动</text>
+  <rect x="90" y="520" width="1210" height="430" rx="14" fill="#2a78d6" fill-opacity="0.05" stroke="#2a78d6" stroke-width="1.8" stroke-dasharray="9,6"/>
+  <rect x="106" y="504" width="146" height="32" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="1.6"/>
+  <text x="179" y="525" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#2a78d6">对局核心循环</text>
+  <text x="1284" y="546" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14" fill="#52514e">updatePlay(1/60) · 场景 play · 60Hz</text>
+  <rect x="90" y="1000" width="1210" height="170" rx="14" fill="#eb6834" fill-opacity="0.05" stroke="#eb6834" stroke-width="1.8" stroke-dasharray="9,6"/>
+  <rect x="106" y="984" width="162" height="32" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="1.6"/>
+  <text x="187" y="1005" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#eb6834">局外成长 · v2</text>
+  <text x="1284" y="1026" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14" fill="#52514e">跨局持久 · 事件 + 结算</text>
+  <rect x="90" y="1220" width="1210" height="120" rx="14" fill="#1baf7a" fill-opacity="0.05" stroke="#1baf7a" stroke-width="1.8" stroke-dasharray="9,6"/>
+  <rect x="106" y="1204" width="86" height="32" rx="8" fill="#ffffff" stroke="#1baf7a" stroke-width="1.6"/>
+  <text x="149" y="1225" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#1baf7a">平台层</text>
+  <text x="1284" y="1246" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14" fill="#52514e">常驻</text>
+  <rect x="1400" y="100" width="300" height="700" rx="14" fill="#8a8984" fill-opacity="0.05" stroke="#8a8984" stroke-width="1.8" stroke-dasharray="9,6"/>
+  <rect x="1416" y="84" width="126" height="32" rx="8" fill="#ffffff" stroke="#8a8984" stroke-width="1.6"/>
+  <text x="1479" y="105" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="20" font-weight="bold" fill="#8a8984">构建与发布</text>
+  <text x="1684" y="126" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14" fill="#52514e">双端产物</text>
+  <rect x="90" y="290" width="1210" height="170" rx="10" fill="#ffffff" stroke="#111111" stroke-width="2.2"/>
+  <text x="108" y="324" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">场景状态机 SCENE</text>
+  <text x="1282" y="324" text-anchor="end" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">全局 let · 每帧 switch 分发 upd/draw</text>
+  <rect x="120" y="344" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="195.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">title</text>
+  <rect x="300" y="344" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="375.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">select</text>
+  <rect x="480" y="344" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="555.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">play</text>
+  <rect x="660" y="344" width="130" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="725.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">over</text>
+  <rect x="820" y="344" width="130" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="885.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">clear</text>
+  <rect x="980" y="344" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="1055.0" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">allclear</text>
+  <rect x="120" y="398" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="195.0" y="418" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">shop 强化</text>
+  <rect x="300" y="398" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="375.0" y="418" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">ach 成就</text>
+  <rect x="480" y="398" width="150" height="40" rx="8" fill="#e9eff8" stroke="#3d4c6f" stroke-width="1.4"/>
+  <text x="555.0" y="418" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#111111">codex 图鉴</text>
+  <text x="285" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#52514e">→</text>
+  <text x="465" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="bold" fill="#52514e">→</text>
+  <text x="645" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" fill="#52514e">·</text>
+  <text x="805" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" fill="#52514e">·</text>
+  <text x="965" y="364" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="16" fill="#52514e">·</text>
+  <text x="642" y="418" text-anchor="start" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" fill="#52514e">← 由 select 进入</text>
+  <rect x="120" y="146" width="360" height="64" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="121.4" y="149" width="4" height="58" rx="2" fill="#8a8984"/>
+  <text x="300.0" y="172" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">键盘</text>
+  <text x="300.0" y="195" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">WASD · 数字 1~0 · B/C/T/E/R/P/M</text>
+  <rect x="520" y="146" width="360" height="64" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="521.4" y="149" width="4" height="58" rx="2" fill="#8a8984"/>
+  <text x="700.0" y="172" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">鼠标 · 触摸</text>
+  <text x="700.0" y="195" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">虚拟摇杆 joyVec · 点击 uiHit</text>
+  <rect x="920" y="146" width="340" height="64" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="921.4" y="149" width="4" height="58" rx="2" fill="#8a8984"/>
+  <text x="1090.0" y="172" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">微信触摸路径</text>
+  <text x="1090.0" y="195" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">wx.onTouchStart · __wxTap 合成</text>
+  <rect x="120" y="590" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="121.4" y="593" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="295.0" y="624" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">player 火柴人</text>
+  <text x="295.0" y="654" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">心血 5♥→8 · 护盾 · 无敌帧</text>
+  <text x="295.0" y="675" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">WASD/摇杆 · 受击/死亡流程</text>
+  <circle cx="454" cy="606" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="454" y="606" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">1</text>
+  <rect x="525" y="590" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="526.4" y="593" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="700.0" y="624" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">enemies 数字大军</text>
+  <text x="700.0" y="654" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">LV_WAVES 波次表 · 15 种怪</text>
+  <text x="700.0" y="675" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">碰撞 / 弹幕 · 精英加速光环</text>
+  <circle cx="859" cy="606" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="859" y="606" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">3</text>
+  <rect x="930" y="590" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="931.4" y="593" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="1105.0" y="624" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">boss BOSS 战</text>
+  <text x="1105.0" y="654" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">BOSS_DEF 技能池 ×14</text>
+  <text x="1105.0" y="675" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">三形态 · 重生 · 狂暴</text>
+  <circle cx="1264" cy="606" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="1264" y="606" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">4</text>
+  <rect x="120" y="770" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="121.4" y="773" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="295.0" y="804" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">weapons 武器</text>
+  <text x="295.0" y="834" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">6 武器 × 5 级</text>
+  <text x="295.0" y="855" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">满级 + 专属被动 → 6 进化</text>
+  <circle cx="454" cy="786" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="454" y="786" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">2</text>
+  <rect x="525" y="770" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="526.4" y="773" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="700.0" y="804" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">items 掉落</text>
+  <text x="700.0" y="834" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">粉笔屑 = 经验 · 道具 ×6</text>
+  <text x="700.0" y="855" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">磁吸拾取 · 30s 闪烁消失</text>
+  <circle cx="859" cy="786" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="859" y="786" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">5</text>
+  <rect x="930" y="770" width="350" height="140" rx="10" fill="#f4f8fd" stroke="#2a78d6" stroke-width="2.0"/>
+  <rect x="931.4" y="773" width="4" height="134" rx="2" fill="#2a78d6"/>
+  <text x="1105.0" y="804" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">upgrades 三选一</text>
+  <text x="1105.0" y="834" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">新武器 · 被动 ×8 · 回心血</text>
+  <text x="1105.0" y="855" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">进化卡必出首位（金色）</text>
+  <circle cx="1264" cy="786" r="11" fill="#ffffff" stroke="#2a78d6" stroke-width="1.4"/>
+  <text x="1264" y="786" text-anchor="middle" dominant-baseline="central" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#2a78d6">6</text>
+  <rect x="125" y="1050" width="270" height="90" rx="10" fill="#fff7f0" stroke="#eb6834" stroke-width="2.0"/>
+  <rect x="126.4" y="1053" width="4" height="84" rx="2" fill="#eb6834"/>
+  <text x="260.0" y="1080" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">粉笔货币</text>
+  <text x="260.0" y="1108" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">calcChalk · 每杀实时 +1</text>
+  <text x="260.0" y="1129" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">连杀加成 ≤ +25%</text>
+  <rect x="425" y="1050" width="270" height="90" rx="10" fill="#fff7f0" stroke="#eb6834" stroke-width="2.0"/>
+  <rect x="426.4" y="1053" width="4" height="84" rx="2" fill="#eb6834"/>
+  <text x="560.0" y="1080" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">强化商店</text>
+  <text x="560.0" y="1108" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">META_DEF ×8 · B 键</text>
+  <text x="560.0" y="1129" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">属性跨局生效</text>
+  <rect x="725" y="1050" width="270" height="90" rx="10" fill="#fff7f0" stroke="#eb6834" stroke-width="2.0"/>
+  <rect x="726.4" y="1053" width="4" height="84" rx="2" fill="#eb6834"/>
+  <text x="860.0" y="1080" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">成就</text>
+  <text x="860.0" y="1108" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">ACH_DEF ×10 · C 键</text>
+  <text x="860.0" y="1129" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">解锁 toast · k/n 进度条</text>
+  <rect x="1025" y="1050" width="270" height="90" rx="10" fill="#fff7f0" stroke="#eb6834" stroke-width="2.0"/>
+  <rect x="1026.4" y="1053" width="4" height="84" rx="2" fill="#eb6834"/>
+  <text x="1160.0" y="1080" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">收集图鉴</text>
+  <text x="1160.0" y="1108" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">CODEX ×36 · T 键</text>
+  <text x="1160.0" y="1129" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">首杀点亮 · 里程碑</text>
+  <rect x="120" y="1262" width="390" height="62" rx="10" fill="#f2faf7" stroke="#1baf7a" stroke-width="2.0"/>
+  <rect x="121.4" y="1265" width="4" height="56" rx="2" fill="#1baf7a"/>
+  <text x="315.0" y="1287" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">p5.js 2.3.2 渲染</text>
+  <text x="315.0" y="1309" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">canvas · letterbox 1280×720 · LOWFX</text>
+  <rect x="540" y="1262" width="350" height="62" rx="10" fill="#f2faf7" stroke="#1baf7a" stroke-width="2.0"/>
+  <rect x="541.4" y="1265" width="4" height="56" rx="2" fill="#1baf7a"/>
+  <text x="715.0" y="1287" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">WebAudio 合成</text>
+  <text x="715.0" y="1309" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">音效 sfx · 三套 BGM · 分档音量</text>
+  <rect x="920" y="1262" width="370" height="62" rx="10" fill="#f2faf7" stroke="#1baf7a" stroke-width="2.0"/>
+  <rect x="921.4" y="1265" width="4" height="56" rx="2" fill="#1baf7a"/>
+  <text x="1105.0" y="1287" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">存档 STORE</text>
+  <text x="1105.0" y="1309" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">svsn_v2 · 10s 自动存档 · 导入/导出</text>
+  <rect x="1430" y="146" width="240" height="72" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="1431.4" y="149" width="4" height="66" rx="2" fill="#8a8984"/>
+  <text x="1550.0" y="173" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">主仓库 js/</text>
+  <text x="1550.0" y="197" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">字狂潮v2-全局货币</text>
+  <rect x="1430" y="272" width="240" height="72" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="1431.4" y="275" width="4" height="66" rx="2" fill="#8a8984"/>
+  <text x="1550.0" y="299" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">porting-baseline</text>
+  <text x="1550.0" y="323" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">移植基线 · 同步快照</text>
+  <rect x="1430" y="398" width="240" height="72" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="1431.4" y="401" width="4" height="66" rx="2" fill="#8a8984"/>
+  <text x="1550.0" y="425" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">build-bundle.py</text>
+  <text x="1550.0" y="449" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">单文件 bundle.js</text>
+  <rect x="1430" y="524" width="240" height="72" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="1431.4" y="527" width="4" height="66" rx="2" fill="#8a8984"/>
+  <text x="1550.0" y="551" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">微信小游戏</text>
+  <text x="1550.0" y="575" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">minigame-1 · 开发者工具</text>
+  <rect x="1430" y="650" width="240" height="72" rx="10" fill="#f4f3ef" stroke="#8a8984" stroke-width="2.0"/>
+  <rect x="1431.4" y="653" width="4" height="66" rx="2" fill="#8a8984"/>
+  <text x="1550.0" y="677" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="22" font-weight="bold" fill="#111111">GitHub 仓库</text>
+  <text x="1550.0" y="701" text-anchor="middle" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">main=v1 冻结 · v2=续作</text>
+  <g fill="none">
+  <polyline points="300,210 300,290" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="700,210 700,290" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="1090,210 1090,290" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="700,146 700,60 50,60 50,660 120,660" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="695,460 695,520" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="295,770 295,752 610,752 610,730" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="525,660 470,660" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="875,660 930,660" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="700,730 700,770" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="875,840 930,840" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="340,950 340,1030 300,1030 300,1050" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="1000,950 1000,1040 1139,1040 1139,1050" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="560,1050 560,950" fill="none" stroke="#eb6834" stroke-width="1.8" marker-end="url(#ah-eb6834)"/>
+  <polyline points="1105,1140 1105,1262" fill="none" stroke="#52514e" stroke-width="1.8" stroke-dasharray="7,5" marker-end="url(#ah-52514e)"/>
+  <polyline points="1550,218 1550,272" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="1550,344 1550,398" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="1550,470 1550,524" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  <polyline points="1550,596 1550,650" fill="none" stroke="#52514e" stroke-width="1.8" marker-end="url(#ah-52514e)"/>
+  </g>
+  <text x="312" y="254" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">kp() · 快捷键</text>
+  <text x="712" y="254" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">uiHit 点击</text>
+  <text x="1102" y="254" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">wx 触摸事件</text>
+
+  <text x="707" y="494" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">startPlay(lv) · Esc/按钮返回</text>
+  <text x="298" y="744" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">命中 hurtEnemy −1</text>
+  <text x="497" y="578" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="middle" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">受击 hurtPlayer −1♥ · 碰撞/弹幕</text>
+  <text x="902" y="578" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="middle" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">t≥300s spawnBoss</text>
+  <text x="712" y="758" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">击杀掉落</text>
+  <text x="902" y="758" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="middle" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">粉笔屑 = 经验 addXp</text>
+  <text x="352" y="992" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">击杀实时 +1 · 结算</text>
+  <text x="1012" y="995" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">击杀收录 · 达成解锁</text>
+  <text x="578" y="982" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">META 属性加成 · 下一局</text>
+  <text x="1117" y="1205" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">saveStore · 10s 自动 + 结算</text>
+
+
+  <text x="1562" y="502" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="14.5" fill="#52514e" text-anchor="start" stroke="#ffffff" stroke-width="4.5" paint-order="stroke" stroke-linejoin="round">require bundle</text>
+
+  <text x="1380" y="830" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="17" font-weight="bold" fill="#111111">图例</text>
+  <rect x="1380" y="850" width="24" height="15" rx="3" fill="#2a78d6" fill-opacity="0.15" stroke="#2a78d6" stroke-width="1.4" stroke-dasharray="4,3"/>
+  <text x="1414" y="862" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">对局核心（每帧 update + draw）</text>
+  <rect x="1380" y="877" width="24" height="15" rx="3" fill="#eb6834" fill-opacity="0.15" stroke="#eb6834" stroke-width="1.4" stroke-dasharray="4,3"/>
+  <text x="1414" y="889" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">局外成长（跨局持久，结算入账）</text>
+  <rect x="1380" y="904" width="24" height="15" rx="3" fill="#1baf7a" fill-opacity="0.15" stroke="#1baf7a" stroke-width="1.4" stroke-dasharray="4,3"/>
+  <text x="1414" y="916" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">平台层（渲染 / 音频 / 存档）</text>
+  <text x="1414" y="943" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="15" fill="#52514e">实线 = 调用/数据流 · 虚线框 = 分组</text>
+  <text x="1380" y="990" font-family="SimHei, 'Microsoft YaHei', sans-serif" font-size="13.5" fill="#52514e">字狂潮 v2.3 · 2026-10</text>
+</svg>
