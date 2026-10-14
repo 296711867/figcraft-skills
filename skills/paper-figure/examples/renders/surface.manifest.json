@@ -1,0 +1,30 @@
+{
+  "type": "surface",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "36ae5eb74fa98549b3fba69617f5857b8b95045a8728862af4970666182e13d3",
+  "data_sha256": "8c9a218e042786d45929582b955f76a45114a0f9ce76af184a0a28b7f44c7fc1",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "surface.svg",
+    "surface.pdf",
+    "surface.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Declared data; see scientific-recipes.md"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "regression",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "8e9d2575a74eee97effec8aaac88382758002eb368f28a61adcc8e6ed3ff3573",
+  "data_sha256": "e6e5334d7b06f2ab9b18c48278e9d52b515a5d9e051d5643b4a82dde49f4842f",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "regression.svg",
+    "regression.pdf",
+    "regression.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Unweighted OLS line; no inferred uncertainty"
+}

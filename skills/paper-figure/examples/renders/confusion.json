@@ -1,0 +1,25 @@
+{
+  "type": "confusion",
+  "title": "Confusion",
+  "data": {
+    "labels": [
+      "Negative",
+      "Positive"
+    ],
+    "matrix": [
+      [
+        82,
+        18
+      ],
+      [
+        11,
+        89
+      ]
+    ]
+  },
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  }
+}

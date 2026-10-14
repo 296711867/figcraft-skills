@@ -14,7 +14,7 @@
 **让 AI Agent 稳定产出印刷级论文配图的技能包**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![Skills](https://img.shields.io/badge/skills-7-7B61FF)
+![Skills](https://img.shields.io/badge/skills-8-7B61FF)
 ![Figures validated](https://img.shields.io/badge/figures%20validated-25%2B-2EA44F)
 ![Tested with](https://img.shields.io/badge/tested%20with-GLM--5.3--Flash-D9630E)
 
@@ -29,6 +29,21 @@
 新增 [Codex 制图指南](CODEX.md) 与 [codex-figure-workflow](skills/codex-figure-workflow/SKILL.md)：从项目事实梳理到参数化 SVG、浏览器导出和独立视觉验收。附 [小马宝莉塔罗网站实战](examples/pony-tarot/CASE.md)、可重生成图源和结果图。
 
 ![Codex 架构图实战](examples/pony-tarot/pony-tarot-architecture.png)
+
+## 新增：65 类论文配图入口
+
+新增 **[paper-figure](skills/paper-figure/SKILL.md)**，可整目录独立安装。包含参考项目的 45 类布局规范与示例，加 20 类可直接运行的科研图模板（分布、区间、模型评价、诊断、场、信号与多面板）。已有五条路线和两个参考项目保留。
+
+- [65 类索引](skills/paper-figure/references/chart-catalog.md)：区分 Agent 按规范绘制与脚本直接渲染。
+- [离线图型画廊](skills/paper-figure/gallery.html)：可搜索图型与查看示例；科研示例全部标为合成数据。
+- [科研模板与输入](skills/paper-figure/references/scientific-recipes.md)：20 类完整 JSON 与统计约定。
+- [论文样式和交付](skills/paper-figure/references/publication.md)：灰度/彩色、真实尺寸、数据来源、字体和视觉检查。
+
+直接请 Agent：「读取上述 paper-figure/SKILL.md，按我的真实数据或参考图生成论文配图，保留图源、SVG/PDF/PNG 与验收记录。」不需要先配置品牌或联网字体。
+
+在技能目录运行 `python scripts/render.py --list` 查看 65 类。用 `--spec 文件.json --out 输出目录` 绘制；`--demo all` 仅生成明确标记的合成样例。需本地 numpy、matplotlib；检查与画廊还需 Pillow。
+
+Codex 安装：将 `skills/paper-figure` 整目录复制到 `~/.codex/skills/paper-figure`，即可使用 `$paper-figure`。这次只修改项目，没有自动改动个人已安装技能。
 
 ## Why / 为什么
 
@@ -45,10 +60,11 @@
 | 📷 | ![ECG before/after](assets/before_after_ecg.png) | |
 | | *Bitmap reference → probed-geometry SVG (every box/text/arrow at probed coordinates)* | |
 
-## The six skills / 六个技能
+## The nine skills / 九个技能
 
 | Skill | Use when | What you get |
 |---|---|---|
+| [`paper-figure`](skills/paper-figure/SKILL.md) | 65 chart families: guided SVG layouts + runnable scientific templates | Print styles, SVG/PDF/PNG, provenance and offline gallery |
 | [`codex-figure-workflow`](skills/codex-figure-workflow/SKILL.md) | End-to-end project diagrams in Codex | Source-backed structure → SVG/PNG → acceptance, with a real website case |
 | [`game-arch-diagram`](skills/game-arch-diagram/SKILL.md) | **Software/game architecture figures** — layered bands, state machine, feedback loops | Design language (rider-chip band titles, semantic tints + accent bars, update-order badges, white-halo labels) + 6-defect collision catalogue from real judge rounds |
 | [`hand-svg-structure`](skills/hand-svg-structure/SKILL.md) | Replicating a **bitmap** structure figure (block diagram / flowchart / network) | `probe_geometry.py` (connected-component boxes, ring-scan circles, text-row baselines, color extraction) + `prepare_export_pages.py` (tile-safe browser export pages) |
@@ -56,9 +72,11 @@
 | [`data-figures-rerender`](skills/data-figures-rerender/SKILL.md) | **Data figures** (scatter/bar/slope) — points are real results | Re-render from the same frozen tables, encodings kept item-by-item; SVG + 600 dpi PNG; [`PITFALLS.md`](skills/data-figures-rerender/PITFALLS.md) with 10 field-tested traps |
 | [`declarative-engine`](skills/declarative-engine/SKILL.md) | Grid-based block diagrams via a declarative layout engine | Config syntax + three real manuscript configs + no-download SVG extraction |
 | [`visual-acceptance`](skills/visual-acceptance/SKILL.md) | **Before delivery, always** | Live-page screenshots, tiling self-check (`check_tiling.py`), vision-judge dispatch templates, evidence-driven fix discipline |
+| [`style-presets`](skills/style-presets/SKILL.md) | One figure, several finishes — **academic (default) / web / tech** | Token-dict presets (`get_style()`), swap skins without touching geometry; GPU-pipeline example regenerates all three from one declaration |
 
 | 技能 | 何时用 | 产出 |
 |---|---|---|
+| `paper-figure` | 65 类论文图型：45 类按规范绘制 + 20 类可运行科研模板 | 打印样式、SVG/PDF/PNG、来源记录与离线画廊 |
 | `codex-figure-workflow` | Codex 从源码完成整套架构图 | 完整指南、参数化图源、结果图和验收实战 |
 | `game-arch-diagram` | 软件 / 游戏架构图（分层带 + 状态机 + 反馈回路） | 设计语言七件套（骑缝标题牌 / 语义色浅底 / 色条 / 顺序徽标 / 白描边标签）+ 视觉裁判实战缺陷库 |
 | `hand-svg-structure` | 复刻位图结构图（框图/流程/网络/示意） | 位图几何配色程序化探测 + 防平铺导出页工具 |
@@ -66,6 +84,7 @@
 | `data-figures-rerender` | 数据图（散点/柱状/斜率）——点是真数据 | 同一批冻结表格重渲染，编码逐项保持；绝不手挪数据点 |
 | `declarative-engine` | 网格型框图/网络总览/部署流程图 | 声明式引擎配置语法 + 三份真实论文图配置 |
 | `visual-acceptance` | 交付前必过 | 活页面截屏、平铺自检、独立视觉裁判逐字对照、按像素证据修根因 |
+| `style-presets` | 同一张结构图出科研风（默认）/web 风/科技风多版本 | 样式令牌字典 `get_style()`，换肤不动几何内容；GPU 流程图一图三款示例 |
 
 Codex 新增组合入口：[codex-figure-workflow](skills/codex-figure-workflow/SKILL.md)，适用于基于实际项目制作结构图并完成整套交付。它复用以上路线，不替代它们。
 
@@ -118,6 +137,7 @@ The original paper cases were tested with **GLM-5.3-Flash** (ZCode). The added w
 ```
 figcraft-skills/
 ├── skills/
+│   ├── paper-figure/           # 65-type routing, 20 scientific renderers, gallery
 │   ├── hand-svg-structure/     # probe tool + export pages + examples
 │   ├── parametric-diagram/     # make_fig.py template + example
 │   ├── data-figures-rerender/  # re-render template + PITFALLS.md

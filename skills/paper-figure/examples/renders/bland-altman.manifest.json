@@ -1,0 +1,30 @@
+{
+  "type": "bland-altman",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "a51d554d8d83f110c958e15ab5de4a9487c136d725fd3dc8ce90c5dfcf6c292e",
+  "data_sha256": "376a9fdafaa014197f421f96f198c638e7072392a44d31d1b411c44622c2a09e",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "bland-altman.svg",
+    "bland-altman.pdf",
+    "bland-altman.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "A-B; sample SD ddof=1; LoA=bias +/- 1.96 SD; assumption-dependent"
+}

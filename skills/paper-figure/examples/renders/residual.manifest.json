@@ -1,0 +1,30 @@
+{
+  "type": "residual",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "352eec2c887a87495e7787c2715c8339ead8afbd9278144b5c952f87a04bdd88",
+  "data_sha256": "765b024dc6d264a547d8c502961e39a242795f11d2a88c7b25f598fc82dcc851",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "residual.svg",
+    "residual.pdf",
+    "residual.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Declared data; see scientific-recipes.md"
+}

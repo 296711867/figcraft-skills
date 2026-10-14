@@ -1,0 +1,32 @@
+{
+  "type": "forest",
+  "title": "Forest",
+  "data": {
+    "labels": [
+      "Study A",
+      "Study B",
+      "Study C"
+    ],
+    "effect": [
+      0.2,
+      0.5,
+      0.35
+    ],
+    "lower": [
+      -0.1,
+      0.2,
+      0.12
+    ],
+    "upper": [
+      0.5,
+      0.8,
+      0.58
+    ],
+    "interval_label": "Synthetic interval (not an estimated CI)"
+  },
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  }
+}

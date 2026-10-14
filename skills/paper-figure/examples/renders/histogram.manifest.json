@@ -1,0 +1,30 @@
+{
+  "type": "histogram",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "f9516fffa10de9f116b6d1432b4b6a9ba35da4133b7207b2565dc67d040a602c",
+  "data_sha256": "a7ac349ed1affdfce3381a6c5c5e035a1b1b42c47a377b190e548c04d9135947",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "histogram.svg",
+    "histogram.pdf",
+    "histogram.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Declared data; see scientific-recipes.md"
+}

@@ -1,0 +1,30 @@
+{
+  "type": "correlation",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "7be9ea1f339e8f2483146dc8bbe6973ad0a82337ff0fb9f9bdac0f3a83b012c4",
+  "data_sha256": "521e057ef2d9392d5d672c6086210c5c8d324476a1d1f6ad4215136fa93c63dc",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "correlation.svg",
+    "correlation.pdf",
+    "correlation.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Pearson correlation; complete finite rows only"
+}

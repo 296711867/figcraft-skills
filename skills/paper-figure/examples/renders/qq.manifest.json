@@ -1,0 +1,30 @@
+{
+  "type": "qq",
+  "synthetic": true,
+  "provenance": {
+    "source": "Explicit synthetic demonstration; RNG seed 20261013",
+    "note": "Do not use as experimental results"
+  },
+  "spec_sha256": "a8a2522ee7c8122b1538b9049587b0ad03e1569730995a611d721e2b19ce4a18",
+  "data_sha256": "118399506fd2a80408c07f4f17632fbe4f08e9e64423d3759871a58451059154",
+  "width_mm": 89,
+  "dpi": 600,
+  "grayscale": true,
+  "fonts": [
+    "Arial",
+    "Microsoft YaHei",
+    "SimHei",
+    "DejaVu Sans"
+  ],
+  "python": "3.14.6",
+  "matplotlib": "3.11.0",
+  "numpy": "2.4.6",
+  "files": [
+    "qq.svg",
+    "qq.pdf",
+    "qq.png"
+  ],
+  "text_outside_canvas": [],
+  "visual_review": "pending",
+  "method": "Normal quantiles (i+0.5)/n; quartile reference"
+}

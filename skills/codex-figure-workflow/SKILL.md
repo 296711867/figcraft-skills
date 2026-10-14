@@ -5,7 +5,7 @@ description: 使用 Codex 从项目源码或参考图完成架构图、流程图
 
 # Codex 制图工作流
 
-用户要求基于真实项目画架构图，或用 Codex 完成 figcraft 整套结构图工作时使用。数据图仍走 `data-figures-rerender`，不套用本案例的三列布局。
+用户要求基于真实项目画架构图，或用 Codex 完成 figcraft 整套结构图工作时使用。科研图型选型或新绘制统计图可用 [paper-figure](../paper-figure/SKILL.md) 的 65 类入口；已有数据图忠实重绘仍走 `data-figures-rerender`，不套用本案例的三列布局。
 
 先读 [Codex 完整指南](../../CODEX.md)。需要核对成品结构、尺寸和实战时，再读 [塔罗网站案例](../../examples/pony-tarot/CASE.md)。
 

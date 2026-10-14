@@ -1,0 +1,607 @@
+[
+  {
+    "id": "architecture",
+    "name": "系统架构图",
+    "english": "Architecture",
+    "route": "guided-svg",
+    "use": "Components + connections in one system snapshot",
+    "reference": "references/diagram-design/references/type-architecture.md",
+    "example": "references/diagram-design/assets/example-architecture.html"
+  },
+  {
+    "id": "architecture-delta",
+    "name": "架构前后对比图",
+    "english": "Architecture delta",
+    "route": "guided-svg",
+    "use": "Structural change between synchronized Before / After topologies, with a Changes ledger",
+    "reference": "references/diagram-design/references/type-architecture-delta.md",
+    "example": "references/diagram-design/assets/example-architecture-delta.html"
+  },
+  {
+    "id": "it-state",
+    "name": "IT 现状图",
+    "english": "IT current-state",
+    "route": "guided-svg",
+    "use": "Legacy IT landscape by phase or department; shows the *before* state",
+    "reference": "references/diagram-design/references/type-it-state.md",
+    "example": "references/diagram-design/assets/example-it-state.html"
+  },
+  {
+    "id": "flowchart",
+    "name": "流程图",
+    "english": "Flowchart",
+    "route": "guided-svg",
+    "use": "Decision logic with branches",
+    "reference": "references/diagram-design/references/type-flowchart.md",
+    "example": "references/diagram-design/assets/example-flowchart.html"
+  },
+  {
+    "id": "sequence",
+    "name": "时序图",
+    "english": "Sequence",
+    "route": "guided-svg",
+    "use": "Time-ordered messages between actors",
+    "reference": "references/diagram-design/references/type-sequence.md",
+    "example": "references/diagram-design/assets/example-sequence.html"
+  },
+  {
+    "id": "state",
+    "name": "状态机图",
+    "english": "State machine",
+    "route": "guided-svg",
+    "use": "States + transitions + guards",
+    "reference": "references/diagram-design/references/type-state.md",
+    "example": "references/diagram-design/assets/example-state.html"
+  },
+  {
+    "id": "er",
+    "name": "实体关系图",
+    "english": "ER / data model",
+    "route": "guided-svg",
+    "use": "Entities + fields + relationships",
+    "reference": "references/diagram-design/references/type-er.md",
+    "example": "references/diagram-design/assets/example-er.html"
+  },
+  {
+    "id": "timeline",
+    "name": "时间轴",
+    "english": "Timeline",
+    "route": "guided-svg",
+    "use": "Events positioned in time",
+    "reference": "references/diagram-design/references/type-timeline.md",
+    "example": "references/diagram-design/assets/example-timeline.html"
+  },
+  {
+    "id": "swimlane",
+    "name": "泳道图",
+    "english": "Swimlane",
+    "route": "guided-svg",
+    "use": "Cross-functional process with handoffs",
+    "reference": "references/diagram-design/references/type-swimlane.md",
+    "example": "references/diagram-design/assets/example-swimlane.html"
+  },
+  {
+    "id": "quadrant",
+    "name": "象限图",
+    "english": "Quadrant",
+    "route": "guided-svg",
+    "use": "Two-axis positioning / prioritization",
+    "reference": "references/diagram-design/references/type-quadrant.md",
+    "example": "references/diagram-design/assets/example-quadrant.html"
+  },
+  {
+    "id": "radar",
+    "name": "雷达图",
+    "english": "Radar / Spider",
+    "route": "guided-svg",
+    "use": "Multiple entities scored across 3–5 quantitative criteria",
+    "reference": "references/diagram-design/references/type-radar.md",
+    "example": "references/diagram-design/assets/example-radar.html"
+  },
+  {
+    "id": "polar",
+    "name": "极坐标图",
+    "english": "Polar chart",
+    "route": "guided-svg",
+    "use": "One quantitative series across cyclic categories; angle=category, radius=magnitude",
+    "reference": "references/diagram-design/references/type-polar.md",
+    "example": "references/diagram-design/assets/example-polar.html"
+  },
+  {
+    "id": "loop",
+    "name": "循环反馈图",
+    "english": "Loop",
+    "route": "guided-svg",
+    "use": "Reinforcing cycle; the last step feeds the first and a hub accumulates state",
+    "reference": "references/diagram-design/references/type-loop.md",
+    "example": "references/diagram-design/assets/example-loop.html"
+  },
+  {
+    "id": "nested",
+    "name": "嵌套包含图",
+    "english": "Nested",
+    "route": "guided-svg",
+    "use": "Hierarchy through containment / scope",
+    "reference": "references/diagram-design/references/type-nested.md",
+    "example": "references/diagram-design/assets/example-nested.html"
+  },
+  {
+    "id": "tree",
+    "name": "树形图",
+    "english": "Tree",
+    "route": "guided-svg",
+    "use": "Parent → children relationships",
+    "reference": "references/diagram-design/references/type-tree.md",
+    "example": "references/diagram-design/assets/example-tree.html"
+  },
+  {
+    "id": "org-chart",
+    "name": "组织图",
+    "english": "Org chart",
+    "route": "guided-svg",
+    "use": "Human/agent/team ownership, reporting, routing, escalation",
+    "reference": "references/diagram-design/references/type-org-chart.md",
+    "example": "references/diagram-design/assets/example-org-chart.html"
+  },
+  {
+    "id": "layers",
+    "name": "分层图",
+    "english": "Layer stack",
+    "route": "guided-svg",
+    "use": "Stacked abstraction levels",
+    "reference": "references/diagram-design/references/type-layers.md",
+    "example": "references/diagram-design/assets/example-layers.html"
+  },
+  {
+    "id": "exploded",
+    "name": "轴测爆炸图",
+    "english": "Exploded axonometric",
+    "route": "guided-svg",
+    "use": "Parts of one object pulled apart along one axis: a teardown, an unboxing, assembly order",
+    "reference": "references/diagram-design/references/type-exploded.md",
+    "example": "references/diagram-design/assets/example-exploded.html"
+  },
+  {
+    "id": "axonometric-plan",
+    "name": "轴测平面图",
+    "english": "Axonometric plan",
+    "route": "guided-svg",
+    "use": "One floor or site seen from above at an angle: rooms with furniture, buildings by phase",
+    "reference": "references/diagram-design/references/type-axonometric-plan.md",
+    "example": "references/diagram-design/assets/example-axonometric-plan.html"
+  },
+  {
+    "id": "venn",
+    "name": "维恩图",
+    "english": "Venn",
+    "route": "guided-svg",
+    "use": "Overlap between sets",
+    "reference": "references/diagram-design/references/type-venn.md",
+    "example": "references/diagram-design/assets/example-venn.html"
+  },
+  {
+    "id": "pyramid",
+    "name": "金字塔与漏斗图",
+    "english": "Pyramid / funnel",
+    "route": "guided-svg",
+    "use": "Ranked hierarchy or conversion drop-off",
+    "reference": "references/diagram-design/references/type-pyramid.md",
+    "example": "references/diagram-design/assets/example-pyramid.html"
+  },
+  {
+    "id": "bar",
+    "name": "柱状图",
+    "english": "Bar chart",
+    "route": "guided-svg",
+    "use": "Quantitative comparison across categories",
+    "reference": "references/diagram-design/references/type-bar.md",
+    "example": "references/diagram-design/assets/example-bar.html"
+  },
+  {
+    "id": "waterfall",
+    "name": "瀑布图",
+    "english": "Waterfall",
+    "route": "guided-svg",
+    "use": "A start total bridged to an end total by signed contributions (budget bridge, headcount deltas)",
+    "reference": "references/diagram-design/references/type-waterfall.md",
+    "example": "references/diagram-design/assets/example-waterfall.html"
+  },
+  {
+    "id": "treemap",
+    "name": "矩形树图",
+    "english": "Treemap",
+    "route": "guided-svg",
+    "use": "Part-of-whole where the relative sizes are the story",
+    "reference": "references/diagram-design/references/type-treemap.md",
+    "example": "references/diagram-design/assets/example-treemap.html"
+  },
+  {
+    "id": "heatmap",
+    "name": "热力图",
+    "english": "Heatmap",
+    "route": "guided-svg",
+    "use": "Cross-tabulated data; fill encodes value per cell",
+    "reference": "references/diagram-design/references/type-heatmap.md",
+    "example": "references/diagram-design/assets/example-heatmap.html"
+  },
+  {
+    "id": "line",
+    "name": "折线图",
+    "english": "Line chart",
+    "route": "guided-svg",
+    "use": "Continuous trends over time, change between exactly two states (slopegraph), one distribution per series (ridgeline), or rank movement across several snapshots (bump)",
+    "reference": "references/diagram-design/references/type-line.md",
+    "example": "references/diagram-design/assets/example-line.html"
+  },
+  {
+    "id": "gantt",
+    "name": "甘特图",
+    "english": "Gantt",
+    "route": "guided-svg",
+    "use": "Tasks and phases on a timeline",
+    "reference": "references/diagram-design/references/type-gantt.md",
+    "example": "references/diagram-design/assets/example-gantt.html"
+  },
+  {
+    "id": "scatter",
+    "name": "散点图",
+    "english": "Scatter plot",
+    "route": "guided-svg",
+    "use": "Correlation or distribution of two variables; bubble (three variables) and beeswarm (one variable, dot per item) variants",
+    "reference": "references/diagram-design/references/type-scatter.md",
+    "example": "references/diagram-design/assets/example-scatter.html"
+  },
+  {
+    "id": "high-level",
+    "name": "数据栈总览图",
+    "english": "High-Level",
+    "route": "guided-svg",
+    "use": "End-to-end data stack on a container cluster",
+    "reference": "references/diagram-design/references/type-high-level.md",
+    "example": "references/diagram-design/assets/example-high-level.html"
+  },
+  {
+    "id": "process",
+    "name": "多角色过程图",
+    "english": "Process",
+    "route": "guided-svg",
+    "use": "Multi-actor sequential process with data handoffs",
+    "reference": "references/diagram-design/references/type-process.md",
+    "example": "references/diagram-design/assets/example-process.html"
+  },
+  {
+    "id": "medallion",
+    "name": "数据质量分层图",
+    "english": "Medallion",
+    "route": "guided-svg",
+    "use": "Multi-tier data storage with quality levels and access policies",
+    "reference": "references/diagram-design/references/type-medallion.md",
+    "example": "references/diagram-design/assets/example-medallion.html"
+  },
+  {
+    "id": "data-flow",
+    "name": "数据流图",
+    "english": "Data flow",
+    "route": "guided-svg",
+    "use": "Role-scoped data flow: who does what at each pipeline step",
+    "reference": "references/diagram-design/references/type-data-flow.md",
+    "example": "references/diagram-design/assets/example-data-flow.html"
+  },
+  {
+    "id": "dp-integration",
+    "name": "数据平台集成图",
+    "english": "DP integration",
+    "route": "guided-svg",
+    "use": "Integration topology of a data platform — sources → core → consumers",
+    "reference": "references/diagram-design/references/type-dp-integration.md",
+    "example": "references/diagram-design/assets/example-dp-integration.html"
+  },
+  {
+    "id": "dp-security-matrix",
+    "name": "权限矩阵",
+    "english": "DP security matrix",
+    "route": "guided-svg",
+    "use": "Per-role / per-component access permissions matrix",
+    "reference": "references/diagram-design/references/type-dp-security-matrix.md",
+    "example": "references/diagram-design/assets/example-dp-security-matrix.html"
+  },
+  {
+    "id": "sankey",
+    "name": "桑基图",
+    "english": "Sankey",
+    "route": "guided-svg",
+    "use": "A quantity splitting and merging across stages, band width = amount",
+    "reference": "references/diagram-design/references/type-sankey.md",
+    "example": "references/diagram-design/assets/example-sankey.html"
+  },
+  {
+    "id": "fishbone",
+    "name": "鱼骨图",
+    "english": "Fishbone",
+    "route": "guided-svg",
+    "use": "Causes of one observed effect, grouped by category (root-cause analysis)",
+    "reference": "references/diagram-design/references/type-fishbone.md",
+    "example": "references/diagram-design/assets/example-fishbone.html"
+  },
+  {
+    "id": "wardley",
+    "name": "Wardley 演化图",
+    "english": "Wardley map",
+    "route": "guided-svg",
+    "use": "Value chain against evolution — what to build, buy, and what is moving",
+    "reference": "references/diagram-design/references/type-wardley.md",
+    "example": "references/diagram-design/assets/example-wardley.html"
+  },
+  {
+    "id": "kanban",
+    "name": "看板图",
+    "english": "Kanban",
+    "route": "guided-svg",
+    "use": "Work-in-progress by state, with WIP limits and blocked items",
+    "reference": "references/diagram-design/references/type-kanban.md",
+    "example": "references/diagram-design/assets/example-kanban.html"
+  },
+  {
+    "id": "journey",
+    "name": "用户旅程图",
+    "english": "User journey",
+    "route": "guided-svg",
+    "use": "What a person does across stages of an experience, and how it feels",
+    "reference": "references/diagram-design/references/type-journey.md",
+    "example": "references/diagram-design/assets/example-journey.html"
+  },
+  {
+    "id": "service-blueprint",
+    "name": "服务蓝图",
+    "english": "Service blueprint",
+    "route": "guided-svg",
+    "use": "What the customer does vs what the service hides, across stages, with a line of visibility",
+    "reference": "references/diagram-design/references/type-service-blueprint.md",
+    "example": "references/diagram-design/assets/example-service-blueprint.html"
+  },
+  {
+    "id": "deployment",
+    "name": "部署图",
+    "english": "Deployment",
+    "route": "guided-svg",
+    "use": "Where software runs — zones, hosts, artifacts, replicas, ports",
+    "reference": "references/diagram-design/references/type-deployment.md",
+    "example": "references/diagram-design/assets/example-deployment.html"
+  },
+  {
+    "id": "dependency",
+    "name": "依赖图",
+    "english": "Dependency graph",
+    "route": "guided-svg",
+    "use": "What depends on what, with fan-in and cycles a tree cannot express",
+    "reference": "references/diagram-design/references/type-dependency.md",
+    "example": "references/diagram-design/assets/example-dependency.html"
+  },
+  {
+    "id": "uml-class",
+    "name": "UML 类图",
+    "english": "UML class",
+    "route": "guided-svg",
+    "use": "Classes with operations, inheritance, composition (other UML routes elsewhere)",
+    "reference": "references/diagram-design/references/type-uml-class.md",
+    "example": "references/diagram-design/assets/example-uml-class.html"
+  },
+  {
+    "id": "story-map",
+    "name": "故事地图",
+    "english": "Story map",
+    "route": "guided-svg",
+    "use": "Narrative backbone sliced into releases, with the cut line",
+    "reference": "references/diagram-design/references/type-story-map.md",
+    "example": "references/diagram-design/assets/example-story-map.html"
+  },
+  {
+    "id": "db-schema",
+    "name": "数据库模式图",
+    "english": "Database schema",
+    "route": "guided-svg",
+    "use": "Physical tables: SQL types, constraints, indexes, column-level FKs",
+    "reference": "references/diagram-design/references/type-db-schema.md",
+    "example": "references/diagram-design/assets/example-db-schema.html"
+  },
+  {
+    "id": "histogram",
+    "name": "直方图",
+    "english": "histogram",
+    "route": "python",
+    "use": "Distribution of continuous observations",
+    "reference": "references/scientific-recipes.md",
+    "schema": "values; optional bins",
+    "example": "examples/specs/histogram.json"
+  },
+  {
+    "id": "box",
+    "name": "箱线图",
+    "english": "box",
+    "route": "python",
+    "use": "Compare medians, spread and outliers",
+    "reference": "references/scientific-recipes.md",
+    "schema": "groups=[{label, values}]",
+    "example": "examples/specs/box.json"
+  },
+  {
+    "id": "violin",
+    "name": "小提琴图",
+    "english": "violin",
+    "route": "python",
+    "use": "Compare distribution shapes",
+    "reference": "references/scientific-recipes.md",
+    "schema": "groups=[{label, values}]",
+    "example": "examples/specs/violin.json"
+  },
+  {
+    "id": "ecdf",
+    "name": "经验累积分布图",
+    "english": "ecdf",
+    "route": "python",
+    "use": "Compare cumulative probabilities without binning",
+    "reference": "references/scientific-recipes.md",
+    "schema": "groups=[{label, values}]",
+    "example": "examples/specs/ecdf.json"
+  },
+  {
+    "id": "errorbar",
+    "name": "误差棒图",
+    "english": "errorbar",
+    "route": "python",
+    "use": "Supplied estimates with declared uncertainty",
+    "reference": "references/scientific-recipes.md",
+    "schema": "x, y, lower, upper, interval_label",
+    "example": "examples/specs/errorbar.json"
+  },
+  {
+    "id": "confidence-band",
+    "name": "置信带图",
+    "english": "confidence-band",
+    "route": "python",
+    "use": "Supplied curve and pointwise uncertainty bounds",
+    "reference": "references/scientific-recipes.md",
+    "schema": "x, y, lower, upper, interval_label",
+    "example": "examples/specs/confidence-band.json"
+  },
+  {
+    "id": "regression",
+    "name": "回归散点与拟合线",
+    "english": "regression",
+    "route": "python",
+    "use": "Raw paired observations with an ordinary least squares line",
+    "reference": "references/scientific-recipes.md",
+    "schema": "x, y",
+    "example": "examples/specs/regression.json"
+  },
+  {
+    "id": "residual",
+    "name": "残差诊断图",
+    "english": "residual",
+    "route": "python",
+    "use": "Inspect supplied fitted values and residuals",
+    "reference": "references/scientific-recipes.md",
+    "schema": "fitted, residuals",
+    "example": "examples/specs/residual.json"
+  },
+  {
+    "id": "qq",
+    "name": "正态 Q–Q 图",
+    "english": "qq",
+    "route": "python",
+    "use": "Inspect departure from normality using sample quantiles",
+    "reference": "references/scientific-recipes.md",
+    "schema": "values",
+    "example": "examples/specs/qq.json"
+  },
+  {
+    "id": "bland-altman",
+    "name": "Bland–Altman 一致性图",
+    "english": "bland-altman",
+    "route": "python",
+    "use": "Compare two measurements on the same subjects",
+    "reference": "references/scientific-recipes.md",
+    "schema": "a, b; sample size >= 2",
+    "example": "examples/specs/bland-altman.json"
+  },
+  {
+    "id": "forest",
+    "name": "森林图",
+    "english": "forest",
+    "route": "python",
+    "use": "Compare supplied study effects and uncertainty",
+    "reference": "references/scientific-recipes.md",
+    "schema": "labels, effect, lower, upper, interval_label; optional null, xscale",
+    "example": "examples/specs/forest.json"
+  },
+  {
+    "id": "roc",
+    "name": "ROC 曲线",
+    "english": "roc",
+    "route": "python",
+    "use": "Binary prediction: false positive rate versus sensitivity",
+    "reference": "references/scientific-recipes.md",
+    "schema": "y_true (0/1), score (higher=positive)",
+    "example": "examples/specs/roc.json"
+  },
+  {
+    "id": "precision-recall",
+    "name": "精确率–召回率曲线",
+    "english": "precision-recall",
+    "route": "python",
+    "use": "Binary prediction with positive prevalence baseline",
+    "reference": "references/scientific-recipes.md",
+    "schema": "y_true (0/1), score (higher=positive)",
+    "example": "examples/specs/precision-recall.json"
+  },
+  {
+    "id": "calibration",
+    "name": "概率校准图",
+    "english": "calibration",
+    "route": "python",
+    "use": "Compare predicted probability with observed frequency",
+    "reference": "references/scientific-recipes.md",
+    "schema": "y_true (0/1), probability (0..1); optional bins",
+    "example": "examples/specs/calibration.json"
+  },
+  {
+    "id": "confusion",
+    "name": "混淆矩阵",
+    "english": "confusion",
+    "route": "python",
+    "use": "Show supplied counts with explicit class orientation",
+    "reference": "references/scientific-recipes.md",
+    "schema": "matrix (nonnegative integers), labels; optional normalize",
+    "example": "examples/specs/confusion.json"
+  },
+  {
+    "id": "correlation",
+    "name": "相关矩阵",
+    "english": "correlation",
+    "route": "python",
+    "use": "Pearson correlation from raw rows and variable columns",
+    "reference": "references/scientific-recipes.md",
+    "schema": "matrix (rows=observations), labels (columns)",
+    "example": "examples/specs/correlation.json"
+  },
+  {
+    "id": "contour",
+    "name": "等高线图",
+    "english": "contour",
+    "route": "python",
+    "use": "Scalar field on a two-dimensional grid",
+    "reference": "references/scientific-recipes.md",
+    "schema": "x, y, z (shape len(y) by len(x))",
+    "example": "examples/specs/contour.json"
+  },
+  {
+    "id": "surface",
+    "name": "三维曲面图",
+    "english": "surface",
+    "route": "python",
+    "use": "Supplied scalar field with essential third-dimensional structure",
+    "reference": "references/scientific-recipes.md",
+    "schema": "x, y, z; optional zlabel",
+    "example": "examples/specs/surface.json"
+  },
+  {
+    "id": "spectrogram",
+    "name": "时频谱图",
+    "english": "spectrogram",
+    "route": "python",
+    "use": "Frequency evolution of a uniformly sampled signal",
+    "reference": "references/scientific-recipes.md",
+    "schema": "signal, sample_rate; optional nfft, overlap",
+    "example": "examples/specs/spectrogram.json"
+  },
+  {
+    "id": "multi-panel",
+    "name": "多面板组合图",
+    "english": "multi-panel",
+    "route": "python",
+    "use": "Compare related panels with consistent fonts and panel labels",
+    "reference": "references/scientific-recipes.md",
+    "schema": "panels=[{type, data, title?, xlabel?, ylabel?}]; optional columns",
+    "example": "examples/specs/multi-panel.json"
+  }
+]
